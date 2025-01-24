@@ -50,7 +50,7 @@ const HeroSection = ({ color }) => {
   ];
 
   return (
-    <div className="w-screen relative overflow-hidden ">
+    <div className="w-screen lg:h-screen relative overflow-hidden ">
       <div className="h-full flex flex-col lg:flex-row justify-center items-center px-4 md:px-11 lg:px-0 xl:max-w-[1350px] mx-auto">
         {/* Text Section */}
         <div className="text-center lg:text-left lg:ml-12 lg:max-w-[45%] xl:max-w-[40%] lg:mt-0 mt-12 md:mt-0">
