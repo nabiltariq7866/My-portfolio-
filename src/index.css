@@ -20,6 +20,7 @@ body{
   }
 .liRotate:hover .fbrotate {
     transform: rotateY(360deg);
+    color:#80DB66;
   }
 .textstroke {
     display: inline-block;
