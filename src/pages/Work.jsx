@@ -4,6 +4,7 @@ import FunFects from '../components/FunFects'
 import Achivements from '../components/Achivements'
 import Heading from '../components/Heading'
 import WorkExperience from '../components/WorkExperience'
+import ScrollingText from '../components/ScrollingText'
 
 const Work = () => {
   return (
@@ -20,9 +21,10 @@ const Work = () => {
     <FunFects/>
     <div className='max-w-[1350px] mx:px-4 h-full mx-auto'>
       <Achivements/>
-      <WorkExperience/>
-      <WorkExperience/>
+      <WorkExperience heading={'Work Experience'} subHeading={'My Experience'}/>
+      <WorkExperience heading={'Education'} subHeading={'My Education'} rowReverse={true} />
     </div>
+      <ScrollingText/>
     </>
 
   )
