@@ -5,6 +5,7 @@ import Achivements from '../components/Achivements'
 import Heading from '../components/Heading'
 import WorkExperience from '../components/WorkExperience'
 import ScrollingText from '../components/ScrollingText'
+import MySkill from '../components/MySkill'
 
 const Work = () => {
   return (
@@ -25,6 +26,7 @@ const Work = () => {
       <WorkExperience heading={'Education'} subHeading={'My Education'} rowReverse={true} />
     </div>
       <ScrollingText/>
+      <MySkill/>
     </>
 
   )
