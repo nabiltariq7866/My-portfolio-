@@ -43,7 +43,7 @@ const ScrollingText = () => {
   }, []);
 
   return (
-    <div className="my-32">
+    <div className="mt-32">
       {/* Left-to-Right Scrolling (No Duplication) */}
       <div className="overflow-hidden w-full  flex items-center mb-3">
         <div
