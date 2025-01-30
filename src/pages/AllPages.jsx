@@ -5,7 +5,8 @@ import About from "./About";
 import ScrollingText from "../components/ScrollingText";
 import Work from "./Work";
 import Service from "./Service";
-import TestinmonialsCards from "../components/TestinmonialsCards";
+import ContactUs from "./ContactUs";
+import Footer from "./Footer";
 
 const AllPages = ({ color }) => {
   let str =
@@ -18,9 +19,8 @@ const AllPages = ({ color }) => {
       <ScrollingText />
       <Work />
       <Service />
-      <div className="w-screen h-screen">
-        <TestinmonialsCards/>
-      </div>
+      <ContactUs />
+      <Footer />
     </div>
   );
 };

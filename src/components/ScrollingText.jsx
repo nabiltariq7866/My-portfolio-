@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 
-const ScrollingText = () => {
+const ScrollingText = ({ second = true }) => {
   const leftToRightRef = useRef(null);
   const rightToLeftRef = useRef(null);
 
@@ -19,13 +19,12 @@ const ScrollingText = () => {
     // Animate the scrolling
     gsap.fromTo(
       leftToRightContainer,
-      { x: -`${totalWidthLTR/2}` }, // Start off-screen (left)
+      { x: -`${totalWidthLTR / 2}` }, // Start off-screen (left)
       {
-        x: -`${totalWidthLTR/2}px`, // Move off-screen (right)
+        x: -`${totalWidthLTR / 2}px`, // Move off-screen (right)
         duration: 80, // Adjust for speed
         ease: "none",
         repeat: -1,
-
       }
     );
 
@@ -43,14 +42,15 @@ const ScrollingText = () => {
   }, []);
 
   return (
-    <div className="mt-32">
+    <div className={`${second ? "mt-32" : ""}`}>
       {/* Left-to-Right Scrolling (No Duplication) */}
       <div className="overflow-hidden w-full  flex items-center mb-3">
         <div
           ref={leftToRightRef}
           className="text-8xl uppercase font-semibold font-jost text-[rgb(33, 37, 41)] whitespace-nowrap"
         >
-          Software Engineer from Pakistan * Passionate about web development and innovation *
+          Software Engineer from Pakistan * Passionate about web development and
+          innovation *
         </div>
       </div>
 
@@ -59,9 +59,8 @@ const ScrollingText = () => {
         <div
           ref={rightToLeftRef}
           className="textstroke opacity-70 text-8xl uppercase font-semibold font-OpenSans  whitespace-nowrap"
-        
         >
-         I’m Open for new projects * Let’s Work Together.
+          I’m Open for new projects * Let’s Work Together.
         </div>
       </div>
     </div>

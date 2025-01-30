@@ -11,6 +11,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
+import Button from "./Button";
 
 const HeroSection = ({ color }) => {
   const circleRef = useRef(null);
@@ -78,11 +79,12 @@ const HeroSection = ({ color }) => {
               />
             </span>
           </h2>
-          <button
+          {/* <button
             className={`py-[10px] hidden lg:block lg:py-[14px] px-10 text-[#f3f3f3] border-2 border-[${color}] font-semibold rounded uppercase flex items-center justify-center hover:bg-[${color}] transition duration-200`}
           >
             Contact US
-          </button>
+          </button> */}
+          <Button>Contact US</Button>
         </div>
 
         {/* Image and Circle Section */}
