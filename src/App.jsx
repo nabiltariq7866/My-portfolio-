@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Home from './pages/Home'
 import { useState } from "react";
-import About from "./pages/About"
-import AllPages from "./pages/AllPages";
+import AllPages from "./all Pages/AllPages";
+import Home from "./Home/Home";
+import About from "./About/About";
 function App() {
   const [color, setColor] = useState('#80DB66');
   const [colors, setColors] = useState('#80DB66');

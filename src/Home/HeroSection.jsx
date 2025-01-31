@@ -11,7 +11,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { Typewriter } from "react-simple-typewriter";
-import Button from "./Button";
+import Button from "../components/Button";
 
 const HeroSection = ({ color }) => {
   const circleRef = useRef(null);

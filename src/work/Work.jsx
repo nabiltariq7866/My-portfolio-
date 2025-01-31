@@ -1,12 +1,11 @@
 import React from "react";
-import Projects from "../components/Projects";
-import FunFects from "../components/FunFects";
-import Achivements from "../components/Achivements";
 import Heading from "../components/Heading";
-import WorkExperience from "../components/WorkExperience";
+import FunFects from "./FunFects";
+import Achivements from "./Achivements";
 import ScrollingText from "../components/ScrollingText";
-import MySkill from "../components/MySkill";
-
+import MySkill from "./MySkill";
+import Projects from "./Projects"
+import WorkExperience from "./WorkExperience";
 const Work = () => {
   return (
     <>

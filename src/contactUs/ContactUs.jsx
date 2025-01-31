@@ -1,11 +1,13 @@
-import React from "react";
 import Heading from "../components/Heading";
 import { FaLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
-import Input from "../components/Input";
+import Input from "./Input";
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import Button from "../components/Button";
-import ScrollingText from "../components/ScrollingText";
 const contactInfo = [
   {
     heading: "Location",
@@ -24,6 +26,22 @@ const contactInfo = [
   },
 ];
 const ContactUs = () => {
+  const divRef = useRef(null);
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: divRef.current,
+        scroller: "body",
+        start: "top 100%",
+        toggleActions: "play none none none",
+      },
+    });
+    timeline.fromTo(
+      divRef.current,
+      { y: "200px", opacity: 0 },
+      { y: "0px", opacity: 1, duration: 1.5, ease: "power3.out" }
+    );
+  }, []);
   return (
     <div className="my-40 w-screen ">
       <div className="max-w-[1350px] md:px-4  mx-auto">
@@ -52,9 +70,9 @@ const ContactUs = () => {
             </div>
           </div>
           <div className="flex-shrink-0 px-3 flex-grow-0  lg:basis-1/2 h-full w-full">
-            <div className="mt-[70px]">
+            <div className="mt-[70px] overflow-hidden">
               <form className="flex flex-wrap gap-3 ">
-                <Input type={"text"} name={"name"} placeholder={"Your Name"} />
+                <Input  type={"text"} name={"name"} placeholder={"Your Name"} />
                 <Input
                   type={"email"}
                   name={"email"}
@@ -66,7 +84,7 @@ const ContactUs = () => {
                   name={"subject"}
                   placeholder={"Your Subject"}
                 />
-                <div class="w-full">
+                <div ref={divRef} class="w-full">
                   <textarea
                     id="inputMessage"
                     name="your-message"
@@ -76,7 +94,7 @@ const ContactUs = () => {
                     class="w-full h-[148px] border border-[#c8ccd4] text-[#9b9db1] text-lg font-[Open_Sans] rounded-md px-5 py-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
                   ></textarea>
                 </div>
-                <Button mt={true}>Submit</Button>
+                <Button  mt={true}>Submit</Button>
               </form>
             </div>
           </div>

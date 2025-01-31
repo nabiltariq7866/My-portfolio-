@@ -1,13 +1,15 @@
 import React from "react";
-import Navbar from "../components/Navbar";
-import Home from "./Home";
-import About from "./About";
-import ScrollingText from "../components/ScrollingText";
-import Work from "./Work";
-import Service from "./Service";
-import ContactUs from "./ContactUs";
-import Footer from "./Footer";
+import Navbar from "./Navbar";
 import GoogleMap from "./GoogleMap";
+import ScrollingText from "../components/ScrollingText";
+import Home from "../Home/Home";
+import Work from "../work/Work";
+import Service from "../service/Service";
+import ContactUs from "../contactUs/ContactUs";
+import About from "../About/About";
+import Footer from "../footer/Footer";
+
+
 
 const AllPages = ({ color }) => {
   return (

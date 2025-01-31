@@ -1,5 +1,5 @@
 import React from "react";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 import "react-circular-progressbar/dist/styles.css";
 import CircularProgresBar from "./CircularProgresBar";
 import { useEffect, useRef } from "react";
@@ -8,21 +8,21 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 const MySkill = () => {
   const divRef = useRef(null);
-  useEffect(() => {
-    const timeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: divRef.current,
-        start: "top 80%",
-        end: "top 30%",
-        toggleActions: "play none none reverse",
-      },
-    });
-    timeline.fromTo(
-      divRef.current,
-      { y: "200px", opacity: 0 },
-      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
-    );
-  }, []);
+ useEffect(() => {
+     const timeline = gsap.timeline({
+       scrollTrigger: {
+         trigger: divRef.current,
+         scroller: "body",
+         start: "top 100%",
+         toggleActions: "play none none reverse",
+       },
+     });
+     timeline.fromTo(
+       divRef.current,
+       { y: "200px", opacity: 0 },
+       { y: "0px", opacity: 1, duration: 1.5, ease: "power3.out" }
+     );
+   }, []);
   return (
     <div className="max-w-[1350px]    px-4 flex mx-auto flex-col  md:flex-row">
       <div className="w-full md:w-[41%] flex flex-col items-start  mt-9 ">

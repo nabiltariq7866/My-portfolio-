@@ -1,6 +1,6 @@
 import React from 'react'
-import HeroSection from '../components/HeroSection'
-import Softskills from '../components/Softskills'
+import HeroSection from './HeroSection'
+import Softskills from './Softskills'
 const Home = ({color}) => {
   return (
     <>

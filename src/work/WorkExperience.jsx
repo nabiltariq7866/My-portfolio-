@@ -1,6 +1,6 @@
 import React from "react";
 import image from "../assets/nabil3.jpg";
-import Heading from "./Heading";
+import Heading from "../components/Heading";
 import Cards from "./Cards";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
@@ -14,8 +14,8 @@ const WorkExperience = ({ rowReverse, heading, subHeading }) => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: divRef.current,
-        start: "top 80%",
-        end: "top 30%",
+        scroller: "body",
+        start: "top 100%",
         toggleActions: "play none none reverse",
       },
     });

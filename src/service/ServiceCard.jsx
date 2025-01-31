@@ -9,15 +9,15 @@ const ServiceCard = ({ title, description, icon }) => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: divRef.current,
-        start: "top 80%",
-        end: "top 30%",
+        scroller: "body",
+        start: "top 100%",
         toggleActions: "play none none reverse",
       },
     });
     timeline.fromTo(
       divRef.current,
       { y: "200px", opacity: 0 },
-      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
+      { y: "0px", opacity: 1, duration: 1.5, ease: "power3.out" }
     );
   }, []);
   return (

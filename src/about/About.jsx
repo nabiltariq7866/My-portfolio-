@@ -7,9 +7,7 @@ import signatutre from "../assets/signature.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-
 gsap.registerPlugin(ScrollTrigger);
-
 const About = ({ color }) => {
   const downloadRef = useRef(null);
   const leftSideDev = useRef(null);
@@ -34,8 +32,8 @@ const About = ({ color }) => {
     const timeline = gsap.timeline({
       scrollTrigger: {
         trigger: leftSideDev.current,
-        start: "top 80%",
-        end: "top 30%",
+        scroller: "body",
+         start: "top 100%",
         toggleActions: "play none none reverse",
       },
     });
