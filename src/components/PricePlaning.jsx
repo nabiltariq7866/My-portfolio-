@@ -1,8 +1,12 @@
 import React from "react";
 import Heading from "./Heading";
 import PriceCards from "./PriceCards";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const PricePlaning = () => {
+ 
   const pricingPlans = [
     {
       heading: "Hourly",
@@ -41,7 +45,7 @@ const PricePlaning = () => {
   return (
     <div className="max-w-[1350px] my-32 h-full   md:px-4 flex mx-auto flex-col">
       <Heading subHeading={"Let's start Work"} heading={"Pricing Plans"} />
-      <div className="mt-20 flex flex-wrap gap-4 items-center justify-center">
+      <div  className="mt-20 flex ov flex-wrap gap-4 items-center justify-center">
     
     {  pricingPlans.map((item,index)=><PriceCards key={index} pricingPlans={item}/>)  }
       </div>

@@ -7,10 +7,9 @@ import Work from "./Work";
 import Service from "./Service";
 import ContactUs from "./ContactUs";
 import Footer from "./Footer";
+import GoogleMap from "./GoogleMap";
 
 const AllPages = ({ color }) => {
-  let str =
-    "Website Developer from Pakistan * Passionate about web development and innovation *  ";
   return (
     <div className="relative overflow-x-hidden">
       <Navbar color={color} />
@@ -20,8 +19,9 @@ const AllPages = ({ color }) => {
       <Work />
       <Service />
       <ContactUs />
+      <GoogleMap/>
       <Footer />
-    </div>
+        </div>
   );
 };
 

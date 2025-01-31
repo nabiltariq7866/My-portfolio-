@@ -2,7 +2,7 @@ import React from "react";
 
 const Input = ({ type, name, placeholder }) => {
   return (
-    <div class="xl:w-[48.9%] lg:w-1/2 md:w-1/2 sm:w-1/2 w-full  ">
+    <div class="md:basis-[48.9%] xl:basis-[49%] lg:basis-[48.6%]  w-full ">
       <input
         id="inputName"
         type={type}

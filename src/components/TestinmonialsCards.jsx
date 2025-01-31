@@ -108,32 +108,6 @@ const data = [
     rating: 4.8,
     audio: "https://testimonialapi.toolcarton.com/audio/8.mp3",
   },
-  {
-    id: 9,
-    name: "Diane Smith",
-    location: "New York, USA",
-    designation: "Sales Head",
-    avatar: "https://testimonialapi.toolcarton.com/avatar/9.jpg",
-    message:
-      "Team offers a powerful suite of tools that every client must have. And if you get stuck their support team will help out. Its is fast, reliable and has no complications at all.",
-    lorem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non fringilla leo. Phasellus dui erat, ultrices sollicitudin ante quis, convallis varius odio. Quisque sed tristique ante.",
-    rating: 4.1,
-    audio: "https://testimonialapi.toolcarton.com/audio/9.mp3",
-  },
-  {
-    id: 10,
-    name: "Mikayla Mccullough",
-    location: "Madrid, Spain",
-    designation: "Designer",
-    avatar: "https://testimonialapi.toolcarton.com/avatar/10.jpg",
-    message:
-      "The vibe, level of inquiry, feedback and traffic at our product services and newly designed booth at a recent conference was very positive.",
-    lorem:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas non fringilla leo. Phasellus dui erat, ultrices sollicitudin ante quis, convallis varius odio. Quisque sed tristique ante.",
-    rating: 4.9,
-    audio: "https://testimonialapi.toolcarton.com/audio/10.mp3",
-  },
 ];
 
 const TestinmonialsCards = () => {

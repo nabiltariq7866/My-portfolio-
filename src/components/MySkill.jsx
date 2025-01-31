@@ -2,7 +2,27 @@ import React from "react";
 import Heading from "./Heading";
 import "react-circular-progressbar/dist/styles.css";
 import CircularProgresBar from "./CircularProgresBar";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const MySkill = () => {
+  const divRef = useRef(null);
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: divRef.current,
+        start: "top 80%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    timeline.fromTo(
+      divRef.current,
+      { y: "200px", opacity: 0 },
+      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
     <div className="max-w-[1350px]    px-4 flex mx-auto flex-col  md:flex-row">
       <div className="w-full md:w-[41%] flex flex-col items-start  mt-9 ">
@@ -13,7 +33,7 @@ const MySkill = () => {
           voluptatem accusantium dolore
         </p>
       </div>
-      <div className="w-full md:w-[50%] lg:pl-8 mt-7 flex flex-wrap gap-5 items-center justify-center md:justify-end">
+      <div ref={divRef} className=" w-full md:w-[50%] lg:pl-8 mt-7 flex flex-wrap gap-5 items-center justify-center md:justify-end">
         <CircularProgresBar />
         <CircularProgresBar />
         <CircularProgresBar />

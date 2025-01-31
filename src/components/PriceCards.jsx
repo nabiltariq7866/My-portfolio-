@@ -1,8 +1,28 @@
 import React from "react";
 import Button from "./Button";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const PriceCards = ({ pricingPlans }) => {
+  const divRef = useRef(null);
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: divRef.current,
+        start: "top 80%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    timeline.fromTo(
+      divRef.current,
+      { y: "200px", opacity: 0 },
+      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
-    <div className="px-3  flex-shrink-0 flex-grow-0 bg-white basis-full md:basis-1/2 z-0 lg:basis-[30%]  lg:max-w-[33.5%] hover:shadow-md hover:-translate-y-3 rounded-md transition-all duration-500 ">
+    <div ref={divRef} className="px-3  flex-shrink-0 flex-grow-0 bg-white basis-full md:basis-1/2 z-0 lg:basis-[30%]  lg:max-w-[33.5%] hover:shadow-md hover:-translate-y-3 rounded-md transition-all duration-500 ">
       <div className="selects mb-[30px] rounded-xl  px-11 pb-12 pt-11 ">
         <h1 className=" capitalize pb-6 border-b mb-2 text-3xl font-jost font-medium border-[#bcc7d3] ">
           {pricingPlans.heading}

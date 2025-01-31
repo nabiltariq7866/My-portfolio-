@@ -21,18 +21,6 @@ function CardTestimonial({ avatar, name, message, designation, location }) {
             </h4>
           </div>
         </div>
-        {/* <p>
-          <span>&ldquo;</span>
-          {message}
-        </p>    
-        <p>
-          <span className="Name">
-            {props.name} , {props.location}
-          </span>
-        </p>
-        <p className="designation">
-          <span>{props.designation}</span>
-        </p> */}
       </div>
     </div>
   );

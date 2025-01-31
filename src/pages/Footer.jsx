@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer className="overflow-hidden  text-black ">
       <div className="max-w-[1350px] md:px-4 pt-28 pb-20  mx-auto border-t border-[#c8ccd4]">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5">
           {/* Logo & Copyright */}
           <div>
             <div className="mb-6">
@@ -25,20 +25,20 @@ const Footer = () => {
                   <img
                     src={logo}
                     alt="Logo"
-                    className="w-8 mr-1 mt-[-8px] xl:w-12"
+                    className="mr-1 mt-[-8px] w-12"
                   />
-                  <div className="text-3xl text-black font-kiwi mt-[-10px] xl:text-5xl">
+                  <div className=" text-black font-kiwi mt-[-12px] text-5xl">
                     abil
                   </div>
                 </div>
               </a>
             </div>
-            <p className="text-sm">
+            <p className="lg:text-sm text-2xl">
               All rights reserved &copy; {new Date().getFullYear()}
             </p>
           </div>
           {/* Newsletter */}
-          <div className="w-[70%]">
+          <div className="lg:w-[70%] w-full">
             <h4 className="text-lg font-semibold mb-4">Newsletter</h4>
             <form className="relative">
               <input
@@ -57,7 +57,7 @@ const Footer = () => {
           {/* Social Links */}
           <div>
             <h4 className="text-lg font-semibold mb-4">Follow Me</h4>
-            <ul className="pr-3 md:pr-9 lg:pr-3 xl:pr-16 flex gap-2">
+            <ul className="pr-3 md:pr-9 lg:pr-3  xl:pr-16 flex gap-2">
               {socialIcons.map(({ id, icon, color }) => (
                 <li
                   key={id}

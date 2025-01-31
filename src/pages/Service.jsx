@@ -8,7 +8,10 @@ import s3 from "../assets/ser-icon3.png";
 import s4 from "../assets/ser-icon4.png";
 import PricePlaning from "../components/PricePlaning";
 import Testimonial from "../components/Testimonial";
-
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const services = [
   {
     title: "Responsive Web Design",
@@ -49,6 +52,22 @@ const services = [
 ];
 
 const Service = () => {
+  const divRef = useRef(null);
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: divRef.current,
+        start: "top 80%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    timeline.fromTo(
+      divRef.current,
+      { y: "200px", opacity: 0 },
+      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
     <>
       <div className="w-screen  bg-[#25262f] py-40">
@@ -58,7 +77,7 @@ const Service = () => {
             heading={"what i offer"}
             white={true}
           />
-          <div className="mt-20 flex flex-wrap">
+          <div ref={divRef} className="mt-20 flex flex-wrap">
             {services.map(({ title, description, icon }) => (
               <ServiceCard
                 title={title}

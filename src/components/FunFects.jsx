@@ -1,9 +1,29 @@
 import React from 'react'
 import logo from "../assets/Subtract.svg"
 import FunFectsBox from './FunFectsBox'
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 const FunFects = () => {
+  const divRef = useRef(null);
+  useEffect(() => {
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: divRef.current,
+        start: "top 80%",
+        end: "top 30%",
+        toggleActions: "play none none reverse",
+      },
+    });
+    timeline.fromTo(
+      divRef.current,
+      { y: "200px", opacity: 0 },
+      { y: "0px", opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
-    <div className='w-screen lg:h-[70vh] my-36 flex items-center justify-center relative z-10 bg-[#25262f] overflow-hidden'>
+    <div ref={divRef}  className='w-screen lg:h-[70vh] my-36 flex items-center justify-center relative z-10 bg-[#25262f] overflow-hidden'>
       <img src={logo} alt="logo" className='hidden lg:block absolute -top-[30%] -left-[2%] -z-10' />
       <img src={logo} alt="logo" className='hidden lg:block absolute -bottom-[13%] right-0 -z-10'  />
       <div className='w-screen h-2/3 pt-12 pb-10 lg:pt-0 lg:pb-0'>

@@ -36,7 +36,7 @@ const ContactUs = () => {
             <div className="mt-[70px] ">
               {contactInfo.map(({ heading, value, icon }) => (
                 <div key={heading} className="flex mt-5">
-                  <div className="w-[72px] flex items-center justify-center mr-8 h-[72px] rounded-full bg-[#80DB66]">
+                  <div className="w-[50px] h-[50px] md:w-[72px] flex items-center justify-center mr-8 md:h-[72px] rounded-full bg-[#80DB66]">
                     <span className="text-white text-2xl">{icon}</span>
                   </div>
                   <div>
@@ -51,7 +51,7 @@ const ContactUs = () => {
               ))}
             </div>
           </div>
-          <div className="flex-shrink-0 px-3 flex-grow-0  lg:basis-1/2 h-full">
+          <div className="flex-shrink-0 px-3 flex-grow-0  lg:basis-1/2 h-full w-full">
             <div className="mt-[70px]">
               <form className="flex flex-wrap gap-3 ">
                 <Input type={"text"} name={"name"} placeholder={"Your Name"} />
