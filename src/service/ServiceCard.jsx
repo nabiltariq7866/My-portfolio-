@@ -11,7 +11,7 @@ const ServiceCard = ({ title, description, icon }) => {
         trigger: divRef.current,
         scroller: "body",
         start: "top 100%",
-        toggleActions: "play none none reverse",
+        toggleActions: "play none none none",
       },
     });
     timeline.fromTo(

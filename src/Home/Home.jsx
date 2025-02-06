@@ -4,10 +4,10 @@ import Softskills from './Softskills'
 const Home = ({color}) => {
   return (
     <>
-    <div className="bg-slider-bg w-screen min-h-screen">
+    <section id="Home" className="bg-slider-bg w-screen min-h-screen">
      <HeroSection color={color}/>
      <Softskills color={color}/>
-    </div>
+    </section>
      
      </>
   )

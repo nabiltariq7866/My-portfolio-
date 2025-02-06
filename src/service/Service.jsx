@@ -53,7 +53,7 @@ const Service = () => {
   
   return (
     <>
-      <div  className="w-screen  bg-[#25262f] py-40">
+      <section id="Service"  className="w-screen  bg-[#25262f] py-40">
         <div className="max-w-[1350px]  h-full   md:px-4 flex mx-auto flex-col">
           <Heading
             subHeading={"service"}
@@ -70,7 +70,7 @@ const Service = () => {
             ))}
           </div>
         </div>
-      </div>
+      </section>
       <PricePlaning />
       <div className="lg:overflow-hidden">
         <Testimonial />

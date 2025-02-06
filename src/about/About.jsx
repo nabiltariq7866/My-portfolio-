@@ -63,7 +63,7 @@ const About = ({ color }) => {
   });
 
   return (
-    <div className="w-full ">
+    <section id="About" className="w-full ">
       <div className="relative mt-[120px] lg:mt-[170px] mb-[110px]">
         <div className="xl:max-w-[1350px] flex lg:flex-row flex-col items-center justify-center mx-auto gap-8 lg:gap-12">
           {/* Left Side */}
@@ -165,7 +165,7 @@ const About = ({ color }) => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

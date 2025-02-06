@@ -9,7 +9,7 @@ import WorkExperience from "./WorkExperience";
 const Work = () => {
   return (
     <>
-      <div className="max-w-[1350px] mx:px-4 h-full mx-auto mt-40">
+      <section id="Work" className="max-w-[1350px] mx:px-4 h-full mx-auto mt-40">
         <Heading subHeading={"Portfolio"} heading={"My Recent Works"} />
         <div className=" w-full h-full mt-20">
           <Projects isFirst={true} />
@@ -17,7 +17,7 @@ const Work = () => {
           <Projects />
           <Projects />
         </div>
-      </div>
+      </section>
       <FunFects />
       <div className="max-w-[1350px] mx:px-4 h-full mx-auto">
         <Achivements />

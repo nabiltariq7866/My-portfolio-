@@ -8,6 +8,8 @@ import Service from "../service/Service";
 import ContactUs from "../contactUs/ContactUs";
 import About from "../About/About";
 import Footer from "../footer/Footer";
+import { ScrollRestoration } from "react-router-dom";
+import ScrollNavigation from "../components/ScrollNavigation";
 
 
 

@@ -43,7 +43,7 @@ const ContactUs = () => {
     );
   }, []);
   return (
-    <div className="my-40 w-screen ">
+    <section id="Contact" className="my-40 w-screen ">
       <div className="max-w-[1350px] md:px-4  mx-auto">
         <Heading
           subHeading={"Contact Me"}
@@ -100,7 +100,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

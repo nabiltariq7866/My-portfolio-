@@ -6,6 +6,7 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdOutlineEmail } from "react-icons/md";
+import GoogleMap from "../all Pages/GoogleMap";
 const socialIcons = [
   { id: "facebook", icon: <FaFacebookF />, color: "bg-blue-600" },
   { id: "twitter", icon: <FaTwitter />, color: "bg-blue-400" },
@@ -14,8 +15,9 @@ const socialIcons = [
 ];
 const Footer = () => {
   return (
-    <footer className="overflow-hidden  text-black ">
+    <section id="Footer" className="overflow-hidden  text-black ">
       <div className="max-w-[1350px] md:px-4 pt-28 pb-20  mx-auto border-t border-[#c8ccd4]">
+        <GoogleMap/>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10 px-5">
           {/* Logo & Copyright */}
           <div>
@@ -70,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
+    </section>
   );
 };
 
