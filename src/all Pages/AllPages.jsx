@@ -23,7 +23,6 @@ const AllPages = ({ color }) => {
       <Work />
       <Service />
       <ContactUs />
-      <GoogleMap/>
       <Footer />
         </div>
   );

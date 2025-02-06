@@ -3,7 +3,7 @@ import React from "react";
 const GoogleMap = () => {
   return (
     
-    <div className="max-w-[1350px] md:px-4  mx-auto mb-14">
+    <div className="max-w-[1350px] md:px-4  mx-auto mb-14 py-9">
     <div className="w-full flex justify-center items-center">
       <iframe
         title="Google Map"
