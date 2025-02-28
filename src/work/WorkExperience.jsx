@@ -31,6 +31,7 @@ const WorkExperience = ({ rowReverse, heading, subHeading }) => {
         rowReverse ? "lg:flex-row-reverse" : ""
       }  justify-between mx:px-4   mx-auto`}
     >
+      {/* this */}
       <div ref={divRef} className="px-3 w-full lg:w-1/2">
         <img src={image} alt="our image" className="rounded-2xl " />
       </div>
