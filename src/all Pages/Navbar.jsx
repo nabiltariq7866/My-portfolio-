@@ -5,7 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import logo from "../assets/logo.png";
-
+import CV from "../assets/Nabil CV.pdf"
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const navLinks = [
@@ -129,11 +129,13 @@ const Navbar = () => {
             </div>
 
             {/* Download CV */}
+            <a href={CV}>
             <div className="w-[181px] pl-12 h-[38px] lg:w-52 lg:h-11">
               <button className="w-full h-full py-3 border-2 border-[#80DB66] text-[#f3f3f3] font-semibold rounded uppercase flex items-center justify-center hover:bg-[#80DB66] transition duration-200">
                 Download CV
               </button>
             </div>
+            </a>
 
             {/* Hamburger Icon */}
             <div className="lg:hidden text-3xl ml-3 cursor-pointer" onClick={() => setIsOpen(true)}>
