@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Heading from "../components/Heading";
 gsap.registerPlugin(ScrollTrigger);
 const PricePlaning = () => {
-  const divRef =useRef()
+  const divRef = useRef();
   useEffect(() => {
     const timeline = gsap.timeline({
       scrollTrigger: {
@@ -58,11 +58,15 @@ const PricePlaning = () => {
     },
   ];
   return (
-    <div  className="max-w-[1350px] my-32 h-full   md:px-4 flex mx-auto flex-col">
+    <div className="max-w-[1350px] my-32 h-full px-3  md:px-4  flex mx-auto flex-col">
       <Heading subHeading={"Let's start Work"} heading={"Pricing Plans"} />
-      <div ref={divRef} className="mt-20 flex ov flex-wrap gap-4 items-center justify-center">
-    
-    {  pricingPlans.map((item,index)=><PriceCards key={index} pricingPlans={item}/>)  }
+      <div
+        ref={divRef}
+        className="mt-20 flex ov flex-wrap gap-4 items-center justify-center"
+      >
+        {pricingPlans.map((item, index) => (
+          <PriceCards key={index} pricingPlans={item} />
+        ))}
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 {
   "name": "My-portfolio-",
-  "homepage": "https://nabiltariq7866.github.io/My-portfolio-/",
+  "homepage": ".",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "surge ./dist"
   },
   "dependencies": {
     "@alptugidin/react-circular-progress-bar": "^1.1.4",

@@ -47,7 +47,7 @@ const ScrollingText = ({ second = true }) => {
       <div className="overflow-hidden w-full  flex items-center mb-3">
         <div
           ref={leftToRightRef}
-          className="text-8xl uppercase font-semibold font-jost text-[rgb(33, 37, 41)] whitespace-nowrap"
+          className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase font-semibold font-jost text-[rgb(33, 37, 41)] whitespace-nowrap"
         >
           Software Engineer from Pakistan * Passionate about web development and
           innovation *
@@ -58,7 +58,7 @@ const ScrollingText = ({ second = true }) => {
       <div className="overflow-hidden w-full flex items-center">
         <div
           ref={rightToLeftRef}
-          className="textstroke opacity-70 text-8xl uppercase font-semibold font-OpenSans  whitespace-nowrap"
+          className="textstroke opacity-70 text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl uppercase font-semibold font-OpenSans  whitespace-nowrap"
         >
           I’m Open for new projects * Let’s Work Together.
         </div>

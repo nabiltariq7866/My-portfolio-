@@ -5,7 +5,7 @@ import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { ImCross } from "react-icons/im";
 import logo from "../assets/logo.png";
-import CV from "../assets/Nabil CV.pdf"
+import CV from "../assets/Nabil CV.pdf";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const navLinks = [
@@ -78,7 +78,10 @@ const Navbar = () => {
   }, []);
 
   return (
-    <div ref={navbarRef} className="w-full bg-slider-bg h-[96px] transition-all duration-300">
+    <div
+      ref={navbarRef}
+      className="w-full bg-slider-bg h-[96px] transition-all duration-300"
+    >
       <div className="w-full h-full bg-transparent xl:w-[1350px] xl:m-auto">
         <div className="h-full flex px-4 justify-between items-center">
           {/* Logo */}
@@ -93,9 +96,13 @@ const Navbar = () => {
           <div className="h-full w-full flex items-center justify-end">
             {/* Sidebar for Small Screens */}
             {isOpen && (
-              <div className="transition-all duration-300 bg-[#80DB66] h-screen w-[95%] z-50 py-2 px-3 absolute top-0 left-0 md:w-1/2 lg:hidden">
+              <div className="transition-all duration-300 bg-[#80DB66] h-screen w-[95%] z-[9999] py-2 px-3 absolute top-0 left-0 md:w-1/2 lg:hidden">
                 <div className="absolute right-4 top-4 w-10 h-10 bg-white rounded-full flex items-center justify-center">
-                  <ImCross color="#80DB66" onClick={() => setIsOpen(false)} className="cursor-pointer" />
+                  <ImCross
+                    color="#80DB66"
+                    onClick={() => setIsOpen(false)}
+                    className="cursor-pointer"
+                  />
                 </div>
                 <div className="flex flex-col space-y-6 mt-28 ml-7">
                   {navLinks.map(({ name, to }) => (
@@ -103,7 +110,9 @@ const Navbar = () => {
                       key={name}
                       onClick={() => handleScroll(to)}
                       className={`font-jost font-medium text-[18px] leading-6 transition duration-200 cursor-pointer bg-transparent ${
-                        activeSection === to ? "text-[#80DB66]" : "text-[#f3f3f3]"
+                        activeSection === to
+                          ? "text-[#80DB66]"
+                          : "text-[#f3f3f3]"
                       }`}
                     >
                       {name}
@@ -129,16 +138,19 @@ const Navbar = () => {
             </div>
 
             {/* Download CV */}
-            <a href={CV}>
-            <div className="w-[181px] pl-12 h-[38px] lg:w-52 lg:h-11">
-              <button className="w-full h-full py-3 border-2 border-[#80DB66] text-[#f3f3f3] font-semibold rounded uppercase flex items-center justify-center hover:bg-[#80DB66] transition duration-200">
-                Download CV
-              </button>
-            </div>
+            <a href={CV} download>
+              <div className="w-[181px] pl-12 h-[38px] lg:w-52 lg:h-11">
+                <button className="w-full h-full py-3 border-2 border-[#80DB66] text-[#f3f3f3] font-semibold rounded uppercase flex items-center justify-center hover:bg-[#80DB66] transition duration-200">
+                  Download CV
+                </button>
+              </div>
             </a>
 
             {/* Hamburger Icon */}
-            <div className="lg:hidden text-3xl ml-3 cursor-pointer" onClick={() => setIsOpen(true)}>
+            <div
+              className="lg:hidden text-3xl ml-3 cursor-pointer"
+              onClick={() => setIsOpen(true)}
+            >
               <RxHamburgerMenu color="#80DB66" />
             </div>
           </div>

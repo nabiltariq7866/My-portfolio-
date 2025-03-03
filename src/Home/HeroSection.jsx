@@ -17,19 +17,22 @@ const HeroSection = ({ color }) => {
   const circleRef = useRef(null);
   const shapesRef = useRef(null);
 
+  // GSAP animations for the circle and shapes
   useEffect(() => {
+    // Circle animation
     gsap.to(circleRef.current, {
-      scale: 1.3,
+      scale: 1.2,
       repeat: -1,
       yoyo: true,
       duration: 3,
       ease: "power1.inOut",
     });
 
+    // Mouse move animation for shapes
     const handleMouseMove = (e) => {
       const { clientX } = e;
       const { innerWidth } = window;
-      const moveAmount = (clientX / innerWidth - 0.1) * 40;
+      const moveAmount = (clientX / innerWidth - 0.5) * 40; // Adjusted for better responsiveness
       gsap.to(shapesRef.current, {
         x: -moveAmount,
         duration: 0.3,
@@ -43,6 +46,7 @@ const HeroSection = ({ color }) => {
     };
   }, []);
 
+  // Social media icons data
   const socialIcons = [
     { id: "facebook", icon: <FaFacebookF />, color: "#3b5998" },
     { id: "twitter", icon: <FaTwitter />, color: "#1DA1F2" },
@@ -51,14 +55,14 @@ const HeroSection = ({ color }) => {
   ];
 
   return (
-    <div className="w-screen lg:h-screen relative overflow-hidden ">
+    <div className="w-screen  relative overflow-hidden">
       <div className="h-full flex flex-col lg:flex-row justify-center items-center px-4 md:px-11 lg:px-0 xl:max-w-[1350px] mx-auto">
         {/* Text Section */}
         <div className="text-center lg:text-left lg:ml-12 lg:max-w-[45%] xl:max-w-[40%] lg:mt-0 mt-12 md:mt-0">
           <p className="font-semibold text-xl lg:text-2xl text-[#80DB66]">
             Hello I'm
           </p>
-          <h1 className="text-7xl md:text-6xl lg:text-[144px] text-white font-semibold leading-tight">
+          <h1 className="text-5xl md:text-6xl lg:text-[144px] text-white font-semibold leading-tight">
             Nabil <br /> <span className="lg:ml-11">Tariq</span>
           </h1>
           <h2 className="text-xl md:text-2xl leading-loose text-white mt-3 mb-10">
@@ -79,11 +83,6 @@ const HeroSection = ({ color }) => {
               />
             </span>
           </h2>
-          {/* <button
-            className={`py-[10px] hidden lg:block lg:py-[14px] px-10 text-[#f3f3f3] border-2 border-[${color}] font-semibold rounded uppercase flex items-center justify-center hover:bg-[${color}] transition duration-200`}
-          >
-            Contact US
-          </button> */}
           <Button>Contact US</Button>
         </div>
 
@@ -101,7 +100,7 @@ const HeroSection = ({ color }) => {
           <img
             src={image}
             alt="Nabil Tariq"
-            className="w-full  md:w-[63%] lg:w-[80%] xl:w-[65%] lg:object-bottom lg:self-end lg:mb-0 xl:mt-[65px] z-[5]"
+            className="w-full md:w-[63%] lg:w-[80%] xl:w-[65%] lg:object-bottom lg:self-end lg:mb-0 xl:mt-[65px] z-0"
           />
         </div>
       </div>

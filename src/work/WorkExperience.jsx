@@ -7,7 +7,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
-const WorkExperience = ({ rowReverse, heading, subHeading }) => {
+const Experiences = ({ rowReverse, heading, subHeading, workData, desri }) => {
   const divRef = useRef(null);
 
   useEffect(() => {
@@ -42,17 +42,16 @@ const WorkExperience = ({ rowReverse, heading, subHeading }) => {
       >
         <Heading subHeading={subHeading} heading={heading} />
         <p className="text-[#4d4d5c] mt-4 text-xl font-OpenSans leading-7">
-          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-          accusantium dolore.
+          {desri}
         </p>
         <div className="pt-6">
-          <Cards rowReverse={rowReverse} />
-          <Cards rowReverse={rowReverse} />
-          <Cards rowReverse={rowReverse} />
+          {workData.map((data) => (
+            <Cards rowReverse={rowReverse} data={data} />
+          ))}
         </div>
       </div>
     </div>
   );
 };
 
-export default WorkExperience;
+export default Experiences;

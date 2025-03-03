@@ -7,6 +7,7 @@ import signatutre from "../assets/signature.svg";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import CV from "../assets/Nabil CV.pdf";
 gsap.registerPlugin(ScrollTrigger);
 const About = ({ color }) => {
   const downloadRef = useRef(null);
@@ -33,7 +34,7 @@ const About = ({ color }) => {
       scrollTrigger: {
         trigger: leftSideDev.current,
         scroller: "body",
-         start: "top 100%",
+        start: "top 100%",
         toggleActions: "play none none reverse",
       },
     });
@@ -104,11 +105,13 @@ const About = ({ color }) => {
                 ref={downloadRef}
                 className="absolute  bottom-[-40px] left-[-70px] w-[150px] h-[150px] md:w-[200px] md:h-[200px] bg-download bg-cover rotate-45 "
               ></div>
-              <img
-                src={downloadIcon}
-                alt="Download Icon"
-                className="absolute bottom-6  -left-[6px] z-20 w-6 md:bottom-12 md:left-5"
-              />
+              <a href={CV} download>
+                <img
+                  src={downloadIcon}
+                  alt="Download Icon"
+                  className="absolute bottom-6  -left-[6px] z-20 w-6 md:bottom-12 md:left-5"
+                />
+              </a>
 
               {/* Name Text (Responsive Size & Positioning) */}
               <div className="absolute bottom-1/4 inline-block -rotate-90 -z-10 right-[50%] md:right-[50%] text-[150px] font-jost text-[#e2ecf6] md:text-[300px] ">
@@ -130,16 +133,18 @@ const About = ({ color }) => {
             <p className="text-base md:text-lg text-[#4d4d5c] leading-relaxed mb-8">
               I am a Frontend Developer and Software Engineer passionate about
               crafting responsive, user-friendly web interfaces. Skilled in
-              modern technologies like React.js, JavaScript, and Tailwind CSS, I
-              focus on building scalable, visually appealing, and
-              high-performing applications while staying updated with industry
-              trends.
+              modern technologies like React.js, JavaScript, TypeScript, MUI,and
+              Tailwind CSS, I focus on building scalable, visually appealing,
+              and high-performing applications while staying updated with
+              industry trends.
             </p>
             <div className="py-6 border-t border-b">
               <div className="grid grid-cols-1 lg:grid-cols-2  gap-4">
                 {personalDetails.map((detail, index) => (
                   <div key={index} className="flex">
-                    <p className="font-medium w-[90px] lg:w-auto text-[#4d4d5c] ">{detail.label}</p>
+                    <p className="font-medium w-[90px] lg:w-auto text-[#4d4d5c] ">
+                      {detail.label}
+                    </p>
                     <p className="ml-4 text-[#4d4d5c]">{detail.value}</p>
                   </div>
                 ))}
