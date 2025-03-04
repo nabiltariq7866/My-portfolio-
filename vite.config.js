@@ -4,5 +4,5 @@ import svgr from "vite-plugin-svgr";
 
 export default defineConfig({
   plugins: [react(), svgr()],
-  base: "", // Ensure correct asset paths
+  base: "./", // Ensure correct asset paths
 });
