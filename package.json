@@ -8,8 +8,7 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "surge ./dist"
+    "predeploy": "npm run build"
   },
   "dependencies": {
     "@alptugidin/react-circular-progress-bar": "^1.1.4",
