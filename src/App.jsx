@@ -10,7 +10,6 @@ import Service from "./service/Service";
 import Loader from "./components/Loader"; // Create this component
 
 function App() {
-  const [color, setColor] = useState("#80DB66");
   const [colors, setColors] = useState("#80DB66");
   const [isLoading, setIsLoading] = useState(true);
 
